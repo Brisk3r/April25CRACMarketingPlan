@@ -1,1 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarence Regional Aquatic Centre: 6-Month Marketing Activation Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f0f4f8; 
+        }
+        body.mobile-menu-active {
+            overflow: hidden;
+        }
 
+        .content-section {
+            margin-bottom: 3rem; 
+            padding-top: 60px; 
+            margin-top: -60px; 
+        }
+        
+        .sidebar-link.active {
+            background-color: #2563EB; 
+            color: white;
+            font-weight: 600;
+        }
+        .sidebar-link:hover {
+            background-color: #DBEAFE; 
+            color: #1E40AF; 
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        th, td {
+            border: 1px solid #cbd5e1; 
+            padding: 1rem; 
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #1E3A8A; 
+            color: white;
+            font-weight: 700; 
+        }
+        h1.page-title {
+            font-size: 2.5rem; 
+            line-height: 1.2; 
+            font-weight: 800; 
+        } 
+        p.page-subtitle {
+            font-size: 1.25rem; 
+            opacity: 1; 
+            color: white;
+        }
+        
+        h2.section-header {
+            font-size: 1.75rem; 
+            line-height: 1.3;    
+            font-weight: 700; 
+            color: #FFFFFF; 
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6); 
+            letter-spacing: 0.01em; 
+            padding: 1.5rem 2rem;   
+            border-radius: 0.5rem; 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); 
+            margin-bottom: 2rem;    
+            position: relative; 
+            overflow: hidden; 
+            z-index: 0; 
+        }
+
+        h2.section-header::before { 
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://www.clarence.nsw.gov.au/files/assets/public/v/1/home-page/news/images/clarence-regional-aquatic-centre.jpg?dimension=pageimagefullwidth&w=1140');
+            background-size: cover;
+            background-position: center; 
+            filter: blur(4px) brightness(0.65); 
+            transform: scale(1.2); 
+            z-index: -1; 
+        }
+
+        @media (min-width: 768px) { /* md breakpoint */
+            h2.section-header {
+                font-size: 3.25rem; 
+                line-height: 1.2;    
+                font-weight: 800; 
+                text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.75); 
+                letter-spacing: 0.03em; 
+                padding: 3.5rem 4rem;   
+                border-radius: 0.75rem; 
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.1); 
+                margin-bottom: 2.5rem; 
+            }
+            h2.section-header::before {
+                filter: blur(5px) brightness(0.6); 
+                transform: scale(1.2); 
+            }
+        }
+
+        h3 { font-size: 1.625rem; line-height: 2.125rem; font-weight: 700; color: #1D4ED8; } 
+        h4 { font-size: 1.375rem; line-height: 1.875rem; font-weight: 600; color: #2563EB; }
+        
+        p, li:not(.action-item-card) {
+            margin-bottom: 1rem;
+            line-height: 1.7; 
+            color: #374151; 
+        }
+        ul:not(.action-list):not(.kpi-list) { 
+            list-style-type: disc;
+            padding-left: 1.75rem;
+        }
+        .kpi-list { 
+            list-style-type: disc; 
+            padding-left: 1.25rem; 
+            margin-top: 0.5rem;
+        }
+        .kpi-list li {
+            margin-bottom: 0.5rem; 
+            font-size: 0.95rem;
+        }
+
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06); 
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .content-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); 
+        }
+
+        .swot-card { 
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+         .swot-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .timeline-phase-card {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            border-left-width: 4px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .timeline-phase-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        #executive-summary .summary-content-card { 
+            background-color: #f8fafc; 
+            padding: 2rem;
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+         #executive-summary .summary-content-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+
+        #executive-summary .summary-text {
+            -webkit-columns: 2 250px; 
+            -moz-columns: 2 250px;    
+            columns: 2 250px;         
+            -webkit-column-gap: 2.5rem; 
+            -moz-column-gap: 2.5rem;    
+            column-gap: 2.5rem;       
+        }
+        @media (max-width: 767px) { 
+            #executive-summary .summary-text {
+                -webkit-columns: 1;
+                -moz-columns: 1;
+                columns: 1;
+            }
+        }
+
+        #executive-summary .summary-text::first-letter {
+            font-size: 4em; 
+            font-weight: 700;
+            color: #2563EB; 
+            float: left; 
+            line-height: 0.8; 
+            margin-right: 0.15em;
+            margin-bottom: -0.1em; 
+            padding-top: 0.05em;
+        }
+
+        .placeholder-image-container {
+            background-color: #e5e7eb; 
+            border: 2px dashed #9ca3af; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #6b7280; 
+            border-radius: 0.75rem; 
+            margin: 1.5rem 0;
+            padding: 2rem;
+        }
+        .chart-container { 
+            height: 350px; 
+        }
+        .kpi-chart-container { 
+            height: 400px; 
+        }
+        .logo-placeholder {
+            font-weight: 700;
+            color: #93C5FD; 
+            font-size: 1.25rem;
+        }
+        .header-gradient {
+             background: linear-gradient(to right, #1E3A8A, #2563EB); 
+        }
+        .two-column-list > div { 
+            break-inside: avoid-column;
+        }
+
+        .main-container {
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+        
+        .sidebar-menu-container {
+            position: fixed;
+            inset: 0; 
+            background-color: rgba(30, 58, 138, 0.95); 
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            padding: 1.25rem; 
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 50; 
+            overflow-y: auto; 
+        }
+
+        .sidebar-menu-container.open {
+            transform: translateX(0);
+        }
+        
+        .main-content-area {
+            width: 100%; 
+        }
+
+        @media (min-width: 768px) { /* md breakpoint */
+            .sidebar-menu-container {
+                position: sticky; 
+                top: 120px; 
+                height: calc(100vh - 120px - 2rem); 
+                transform: translateX(0); 
+                background-color: #ffffff;
+                -webkit-backdrop-filter: none;
+                backdrop-filter: none;
+                box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); 
+                border-radius: 0.75rem; 
+                margin-right: 1.5rem; 
+                margin-bottom: 0; 
+                width: 25%; 
+                z-index: 30; 
+            }
+            .main-content-area {
+                flex: 1; 
+            }
+             body.mobile-menu-active { 
+                overflow: auto;
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .sidebar-menu-container {
+                 width: 20%; 
+            }
+        }
+
+        @media (max-width: 767px) {
+            .main-header-bar .container {
+                padding-right: 4.5rem; 
+            }
+            h1.page-title {
+                font-size: 1.5rem; 
+                line-height: 1.3;
+            }
+            p.page-subtitle {
+                font-size: 0.875rem; 
+                line-height: 1.2;
+            }
+            .content-section { 
+                padding-top: calc(4rem + 24px); 
+                margin-top: calc(-4rem - 24px);
+            }
+        }
+        .mobile-menu-button-container { 
+             position: fixed;
+             top: 1rem; 
+             right: 1rem; 
+             z-index: 60; 
+        }
+
+        .action-items-wrapper { 
+            background-color: #EFF6FF; 
+            border: 1px solid #BFDBFE; 
+            border-radius: 0.75rem; 
+            padding: 2.5rem; 
+            margin-top: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .action-items-heading {
+            font-size: 2rem; 
+            font-weight: 800; 
+            color: #1E3A8A; 
+            margin-bottom: 2rem; 
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #60A5FA; 
+            text-align: center;
+        }
+        .action-list {
+            list-style: none;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 1.5rem; 
+        }
+        .action-item-card { 
+            background-color: #ffffff; 
+            border: 1px solid #93C5FD; 
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .action-item-card:hover {
+            transform: translateY(-5px) scale(1.02); 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .action-item-card svg {
+            width: 2.5rem; 
+            height: 2.5rem;
+            color: #1D4ED8; 
+            margin-bottom: 1rem; 
+        }
+        .action-item-card strong {
+            color: #1E3A8A; 
+            font-size: 1.125rem; 
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .action-item-card p {
+            font-size: 0.9rem;
+            color: #374151; 
+            line-height: 1.6;
+        }
+
+        .kpi-category-card {
+            background-color: #E0F2FE; 
+            border: 1px solid #7DD3FC; 
+            border-radius: 0.75rem;
+            padding: 1.25rem; 
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .kpi-category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .kpi-category-card h4 { 
+            font-size: 1.25rem; 
+            font-weight: 700;
+            color: #0C4A6E; 
+            margin-bottom: 0.75rem;
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="header-gradient text-white p-6 shadow-xl sticky top-0 z-30 main-header-bar"> 
+        <div class="container mx-auto flex items-center justify-between">
+            <div>
+                <h1 class="page-title">Clarence Regional Aquatic Centre</h1>
+                <p class="page-subtitle">6-Month Marketing Activation Plan</p> 
+            </div>
+            <div class="logo-placeholder hidden md:block">
+                [CRAC LOGO]
+            </div>
+        </div>
+    </header>
+
+    <div class="md:hidden mobile-menu-button-container"> 
+        <button id="mobile-menu-toggle" class="text-white bg-blue-600 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white shadow-lg" aria-label="Open menu" aria-expanded="false">
+            <svg id="hamburger-icon" class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="hidden h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="container mx-auto py-10 main-container">
+
+        <aside id="sidebar-menu" class="sidebar-menu-container"> 
+            <nav id="sidebar-nav">
+                <h3 class="text-2xl font-bold mb-5 text-blue-100 md:text-blue-700 border-b-2 border-blue-200 pb-2">Contents</h3>
+                <ul class="space-y-2.5">
+                    <li><a href="#executive-summary" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">Executive Summary</a></li>
+                    <li><a href="#introduction" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">1. Introduction</a></li>
+                    <li><a href="#situational-analysis" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">2. Situational Analysis</a></li>
+                    <li><a href="#marketing-objectives" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">3. Marketing Objectives</a></li>
+                    <li><a href="#target-audiences" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">4. Target Audiences</a></li>
+                    <li><a href="#marketing-strategies" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">5. Marketing Strategies</a></li>
+                    <li><a href="#expanding-horizons" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">6. Expanding Horizons</a></li>
+                    <li><a href="#budget-considerations" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">7. Budget Considerations</a></li>
+                    <li><a href="#activation-timeline" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">8. Activation Timeline</a></li>
+                    <li><a href="#conclusion" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">9. Conclusion</a></li>
+                    <li><a href="#supporting-links" class="sidebar-link block p-3 rounded-lg text-white md:text-gray-700 hover:bg-blue-500 md:hover:bg-blue-100 transition-colors duration-200">Supporting Links</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="p-8 bg-white shadow-xl rounded-xl main-content-area">
+            <section id="executive-summary" class="content-section">
+                <h2 class="section-header">Executive Summary</h2>
+                <div class="summary-content-card mt-4"> 
+                    <p class="summary-text">The recent grand opening of the Clarence Regional Aquatic Centre (CRAC) presents a significant opportunity to establish this state-of-the-art facility as a premier destination for recreation, fitness, and community engagement within the Clarence Valley. This 6-Month Marketing Activation Plan provides a comprehensive strategy to build awareness, drive visitation, foster community integration, and maximise revenue generation during the critical initial operating period. The plan leverages the Centre's modern facilities, addresses the specific demographic context of the region, and outlines targeted strategies across digital marketing, community outreach, aquatic partnerships, and key booking streams. Key performance indicators (KPIs) are defined to measure success, alongside considerations for future growth opportunities. The immediate focus includes capitalising on launch momentum, clarifying and promoting key revenue streams like birthday parties and room hire, and establishing strong foundations for long-term community value and operational sustainability.</p>
+                </div>
+            </section>
+
+            <section id="introduction" class="content-section">
+                <h2 class="section-header">1. Introduction</h2>
+                <h3 class="mt-6 mb-3">1.1. Centre Overview</h3>
+                <p>The Clarence Regional Aquatic Centre, located at the corner of Oliver and Turf Streets in Grafton, represents a major investment in community infrastructure for the Clarence Valley from the council. Replacing the former Grafton Olympic Pool, which closed due to structural concerns in September 2022, the new Centre officially opened in stages during early 2025, with the 50m outdoor pool, the indoor facilities and splash pad, and the official grand opening ceremony held on March 22nd, 2025.</p>
+                <p>Constructed by Hines Construction Pty Ltd, the facility boasts:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600 mb-2">Outdoor Facilities:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>An 8-lane, 50-metre pool suitable for regional competitions</li>
+                            <li>An inclusive zero-depth splash pad</li>
+                            <li>Grandstand seating with wheelchair access</li>
+                            <li>Picnic/shelter areas</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600 mb-2">Indoor Facilities:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>An accessible 8-lane, 25-metre lap pool (FINA standards)</li>
+                            <li>An accessible combined program and leisure pool</li>
+                            <li>Tiered seating</li>
+                            <li>Modern accessible change rooms (including adult change facilities)</li>
+                            <li>On-deck showers</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2"> 
+                        <h4 class="text-lg font-semibold text-blue-600 mb-2 mt-3">General Amenities:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Male/female change rooms, Parents' room</li>
+                            <li>Large multipurpose community room, Bookable community room</li>
+                            <li>Dedicated first aid room, Admin offices</li>
+                            <li>Scoring/storage rooms</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>The Centre offers Learn to Swim and Squad programs, casual swimming, and is recruiting for programs like Aqua Fitness and Elite Squads. Future enhancements include two recreational waterslides, expected by the end of 2025. The indoor pools holds historical significance, named the Grafton Cub Scout Memorial in remembrance of a local tragedy. The Centre operates extensive hours, seven days a week all year round.</p>
+                
+                <div class="placeholder-image-container my-8 p-8 h-72">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p class="text-xl font-medium">Image Grid Placeholder</p>
+                    <p class="text-sm mt-1">A visually engaging grid of photos showcasing the CRAC facilities would be placed here.</p>
+                </div>
+
+                <h3 class="mt-8 mb-3">1.2. Purpose and Scope of the Marketing Plan</h3>
+                <p>This document outlines a strategic marketing plan for the first six months of operation following the Clarence Regional Aquatic Centre's grand opening. The purpose is to:</p>
+                <ul class="space-y-2">
+                    <li>Generate widespread awareness and excitement within the Clarence Valley community.</li>
+                    <li>Drive initial and repeat visitation across various user segments.</li>
+                    <li>Establish strong relationships with community groups, schools, and sporting organisations.</li>
+                    <li>Maximise utilisation of all facility components, including pools, the community room, and party bookings.</li>
+                    <li>Build a foundation for long-term financial sustainability and community value.</li>
+                </ul>
+                <p>The plan encompasses situational analysis, defined objectives, target audience identification, detailed marketing strategies (digital, community, partnerships, bookings), identification of further opportunities, and key performance indicators for measuring success.</p>
+            </section>
+
+            <section id="situational-analysis" class="content-section">
+                <h2 class="section-header">2. Situational Analysis</h2>
+                 <h3 class="mt-6 mb-3">2.1. SWOT Analysis</h3>
+                <p>A SWOT analysis provides a framework for understanding the Centre's current position:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="swot-card bg-green-50 border-l-4 border-green-500">
+                        <h4 class="text-xl font-semibold text-green-700 mb-3">Strengths</h4>
+                        <ul class="list-disc pl-5 space-y-1.5 text-sm text-gray-700">
+                            <li>New, State-of-the-Art Facility: Modern design, brand new equipment, appealing aesthetics.</li>
+                            <li>Diverse Offerings: Caters to various needs – lap swimming (50m/25m), learn-to-swim, squads, leisure (program pool), family fun (splash pad), fitness (Aqua).</li>
+                            <li>Year-Round Access: Heated indoor pools ensure consistent availability regardless of weather.</li>
+                            <li>Accessibility: Designed with inclusivity in mind (accessible pools, change rooms, seating).</li>
+                            <li>Competition Standard: FINA standard 25m pool and regional competition capable 50m pool attract higher-level use.</li>
+                            <li>Supporting Amenities: Club room, storage, multipurpose room, picnic areas enhance user experience.</li>
+                            <li>Community Demand: Highly anticipated project following closure of old pool and community campaigning.</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-red-50 border-l-4 border-red-500">
+                        <h4 class="text-xl font-semibold text-red-700 mb-3">Weaknesses</h4>
+                        <ul class="list-disc pl-5 space-y-1.5 text-sm text-gray-700">
+                            <li>Newness Factor: Potential for initial operational challenges or "teething problems" as staff and systems settle in.</li>
+                            <li>Undefined Offerings: Lack of clear, publicly available information on birthday party packages and community room hire specifics (capacity, pricing, booking process) hinders immediate revenue generation.</li>
+                            <li>Location Perception: Situated on the site of the previous olympic pool, potentially causing confusion with previous maps and socials, could require targeted effort to overcome.</li>
+                            <li>Past Delays: Initial construction delays, partly due to weather, may have impacted initial summer season momentum and therefore community perception. (has not shown effect on community feedback yet).</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-yellow-50 border-l-4 border-yellow-500">
+                        <h4 class="text-xl font-semibold text-yellow-700 mb-3">Opportunities</h4>
+                        <ul class="list-disc pl-5 space-y-1.5 text-sm text-gray-700">
+                            <li>Health & Wellness Focus: Capitalise on growing community interest in health, fitness, and active lifestyles; position aquatic activity for rehabilitation and general wellbeing.</li>
+                            <li>Targeted Bookings: Significant revenue potential from school carnivals, birthday parties, and community room hire once packages are defined and marketed.</li>
+                            <li>Community Partnerships: Collaborate with schools, community groups, businesses, health providers, and Indigenous organisations for mutual benefit and increased reach.</li>
+                            <li>Aquatic Sport Development: Become the hub for local swim clubs and potentially host regional/state events, leveraging high-standard facilities.</li>
+                            <li>Waterslide Addition: Future installation of waterslides (by end 2025) will provide a major new attraction and marketing angle.</li>
+                            <li>Program Expansion: Introduce new classes and programs based on community feedback and demand.</li>
+                        </ul>
+                    </div>
+                    <div class="swot-card bg-purple-50 border-l-4 border-purple-500">
+                        <h4 class="text-xl font-semibold text-purple-700 mb-3">Threats</h4>
+                        <ul class="list-disc pl-5 space-y-1.5 text-sm text-gray-700">
+                            <li>Economic Factors: Lower median household income in the region may make cost a barrier for some potential users; discretionary spending could be impacted by broader economic conditions.</li>
+                            <li>Competition: Other recreational activities, sports, and entertainment options compete for residents' time and money.</li>
+                            <li>Operational Issues: Any significant issues with water quality, staffing, or maintenance could negatively impact reputation after the shutdown.</li>
+                            <li>Seasonality: While indoor facilities mitigate this, outdoor usage is a key feature of the facility and can significantly change with weather/seasons.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>The newness of the facility is a double-edged sword; while its modern features are a major strength, it also means operational processes are still being embedded. Marketing must strongly emphasise the benefits of the new infrastructure while customer service manages expectations. Furthermore, the facility's capacity to support health and wellness goals should be highlighted, appealing to the region's demographic profile which includes an older median age and reported higher rates of certain long-term health conditions. Addressing the current lack of defined packages for birthday parties and the community room is critical; benchmarks from other centres show these are standard offerings and represent immediate revenue opportunities that are currently untapped.</p>
+
+                <h3 class="mt-8 mb-3">2.2. Key Demographics (Clarence Valley LGA & Grafton)</h3>
+                <p>Clarence Valley LGA & Grafton (SA2) Demographic Snapshot (2021 Census). Visual comparisons are provided below the table.</p>
+                <div class="overflow-x-auto shadow-lg rounded-xl mb-6 content-card"> <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4">Demographic Indicator</th>
+                                <th class="py-3 px-4">Clarence Valley LGA</th>
+                                <th class="py-3 px-4">Grafton (SA2)</th>
+                                <th class="py-3 px-4">NSW Average</th>
+                                <th class="py-3 px-4">Key Implications for CRAC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Total Population (2021)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">~54,115</td>
+                                <td class="py-3 px-4 border-t border-slate-200">~19,255</td>
+                                <td class="py-3 px-4 border-t border-slate-200">N/A</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Large potential user base across the valley, with a substantial population base within Grafton itself, close to the Centre.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Median Age (Years)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">49</td>
+                                <td class="py-3 px-4 border-t border-slate-200">43</td>
+                                <td class="py-3 px-4 border-t border-slate-200">39</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Valley: Older population suggests need for seniors programs, Aqua Fitness, accessibility. Grafton: Closer to NSW average, strong market for families, LTS, squads, but also adult fitness.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Aboriginal & Torres Strait Islander Pop (%)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">8.1%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">12.2%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">3.4%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Very high Indigenous population in Grafton, significantly above LGA and state averages. Indicates potential requirement for dedicated, culturally appropriate engagement strategies.</td>
+                            </tr>
+                             <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Median Weekly Household Income ($)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$1,123</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$1,125</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$1,829</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Lower incomes compared to NSW average suggest price sensitivity. Emphasise value, family passes, multi-visit options, and concession pricing.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Family Comp (Couples w/o children %)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">49.7%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">(Data at LGA level)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">N/A</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Significant market for adult lap swimming, Aqua Fitness, potentially off-peak usage.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Family Comp (Couples w/ children %)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">38.4%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">(Data at LGA level)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">N/A</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Core market for LTS, squads, splash pad, family passes, birthday parties.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Family Comp (One Parent Families %)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">11.9%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">(Data at LGA level)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">N/A</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Important segment; consider accessibility of pricing and program times.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Average Household Size (People)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">2.3</td>
+                                <td class="py-3 px-4 border-t border-slate-200">2.3</td>
+                                <td class="py-3 px-4 border-t border-slate-200">N/A</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Supports focus on family and individual offerings.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Education (Bachelor Degree or higher %)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">11.8%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">10.6%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">27.8%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Lower tertiary education levels may influence communication style (clear, direct language).</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Need for Assistance (%)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">7.8%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">8.8%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">6.0%</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Accessibility features are key selling points; potential for targeted disability programs and NDIS provider links.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-2 text-sm text-gray-500 italic">(Note: Data sourced from ABS Census 2021 for Clarence Valley LGA & Grafton unless otherwise specified. NSW Average added for comparison. Need for Assistance % obtained from respective ABS Community Profiles)</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Median Age Comparison (Years)</h4>
+                        <canvas id="medianAgeChart"></canvas>
+                    </div>
+                    <div class="chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Aboriginal & TSI Population (%)</h4>
+                        <canvas id="indigenousPopChart"></canvas>
+                    </div>
+                    <div class="chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Median Weekly Household Income ($)</h4>
+                        <canvas id="medianIncomeChart"></canvas>
+                    </div>
+                    <div class="chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Need for Assistance (%)</h4>
+                        <canvas id="assistanceNeedChart"></canvas>
+                    </div>
+                </div>
+
+                <p class="mt-6">The demographic data highlights a crucial duality. The broader Clarence Valley has an older median age and a significant proportion of households without children, suggesting demand for lap swimming, aqua fitness, and potentially hydrotherapy programs in the versatile program pool. However, the Centre's immediate vicinity, Grafton, has a considerably younger median age (40 vs 49) and a very high proportion of Aboriginal and Torres Strait Islander residents (14.6%). This points to a strong local market for family-oriented activities like Learn to Swim, the splash pad, and birthday parties. The lower median household income across the region, particularly in Grafton, underscores the importance of communicating value and ensuring pricing structures (including family and multi-visit passes) are perceived as accessible. Marketing messages and outreach must be nuanced to appeal to these distinct segments within the overall catchment area. Specific, targeted outreach to the Grafton community, acknowledging its unique profile, will be more effective than a purely region-wide approach.</p>
+            </section>
+
+            <section id="marketing-objectives" class="content-section">
+                <h2 class="section-header">3. Marketing Objectives (First 6 Months)</h2>
+                <p>Based on the situational analysis, the following SMART (Specific, Measurable, Achievable, Relevant, Time-bound) objectives are proposed for the initial 6-month period:</p>
+                <ul class="list-disc pl-5 space-y-3">
+                    <li><strong>Continue to Set Baseline Centre Visitation:</strong> Achieve an average monthly attendance base/increase of X% (Target is difficult due to change of season and new business) by Month 6, measured via entry data.</li>
+                    <li><strong>Drive Program Enrolment:</strong> Secure baseline total enrolments across Learn to Swim, Squads, and Aqua Fitness programs by the end of Month 6, measured via registration system data. Achieve an average class fill rate of 50-80% for scheduled programs.</li>
+                    <li><strong>Grow Digital Audience & Engagement:</strong> Increase Facebook page followers by 50% and establish an Instagram by Month 6. Achieve an average monthly engagement rate of 10% - 20% across platforms, measured via platform analytics. Build an email subscriber list of various per category contacts with an average open rate of 10% - 20% by Month 6.</li>
+                    <li><strong>Establish Key Booking Revenue Streams:</strong> Secure school carnival bookings for the following season beginning in term 2, generate birthday party bookings, and achieve baseline hours of community room hire by Month 6, measured via booking system logs.</li>
+                    <li><strong>Foster Community Integration:</strong> Establish formal or informal partnerships with local schools (starting comms in term 2), 3 community groups/non-profits, and 2 local businesses by Month 6 coming into summer, tracked via internal records. (for example Harvey Norman)</li>
+                    <li><strong>Build Swim Club Relationships:</strong> Secure lane hire agreements with the local swim club for regular training by Month 6. (this has already started to take shape under Kia's bookings post south side’s closure)</li>
+                </ul>
+            </section>
+
+            <section id="target-audiences" class="content-section">
+                <h2 class="section-header">4. Target Audiences</h2>
+                <p>Based on demographics and facility offerings, key target audiences include:</p>
+                <ul class="list-disc pl-5 space-y-3">
+                    <li><strong>Families with Young Children (Ages 0-12):</strong> Primary market for Learn to Swim, splash pad, leisure pool, birthday parties, and family casual swims. Strong concentration in Grafton. Need value, convenience, and fun.</li>
+                    <li><strong>School-Aged Children & Teenagers (Ages 5-18):</strong> Market for Learn to Swim, Squads, school carnivals, casual swimming, potentially youth events, and future waterslides. Significant numbers in local schools.</li>
+                    <li><strong>Adult Fitness Swimmers:</strong> Utilise the 50m and 25m lap pools. Interested in lap swimming, potentially squads or master's swimming. Seek consistent lane availability and potentially multi-visit passes.</li>
+                    <li><strong>Health & Wellness Seekers (All Ages, including Seniors):</strong> Interested in low-impact exercise, Aqua Fitness, rehabilitation, and general wellbeing. Includes the significant older demographic in the Valley. Accessibility features are important.</li>
+                    <li><strong>Local Schools (Primary & Secondary):</strong> Key market for annual swimming carnivals and potentially regular PE programs or reward days. Need reliable booking and safety compliance.</li>
+                    <li><strong>Community Groups & Local Businesses:</strong> Potential users of the multipurpose community room for meetings, events, or training. Businesses may be interested in corporate wellness or sponsorships (for example fitness passport). Includes seniors groups, youth services, disability providers, Indigenous organisations.</li>
+                    <li><strong>Local Swim Clubs & Aquatic Sporting Bodies:</strong> Market for club nights, hosting competitions and end of season ceremonies. Require specific facilities and competition-standard pools. Need engagement with Swimming NSW, Swimming North Coast and local clubs.</li>
+                </ul>
+            </section>
+
+            <section id="marketing-strategies" class="content-section">
+                <h2 class="section-header">5. Marketing Strategies</h2>
+                <h3 class="mt-6 mb-3">5.1. Digital Presence & Communication</h3>
+                <h4 class="mt-5 mb-2 text-gray-700">5.1.1. Social Media Strategy</h4>
+                <p><strong>Goal:</strong> Build an engaged online community, showcase the facility, promote programs/events, and drive visitation.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <p><strong>Platforms:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li><strong>Facebook:</strong> Primary platform for broad reach, event promotion, sharing detailed information, community Q&A, and linking to booking systems. Leverage Clarence Valley Council's existing Facebook presence initially but establish a dedicated CRAC page for focused content.</li>
+                            <li><strong>Instagram (Set-up Needed):</strong> Focus on high-quality visual content – photos and short videos showcasing the facilities, activities (swimming, classes, parties), atmosphere, and user experiences (testimonials, action shots). Use Stories for behind-the-scenes glimpses and timely updates. Drive traffic to Facebook or website for details.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Content Pillars:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Facility Showcase & Program Spotlight</li>
+                            <li>Event Announcements & User Generated Content</li>
+                            <li>Health & Wellness Tips & Operational Updates</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>Content Mix & Schedule:</strong> Aim for 3-5 posts per week on Facebook, 2-4 posts/stories per week on Instagram. Mix formats: high-quality photos, short engaging videos (e.g., splash pad action, lap swimming), graphics for announcements, occasional Facebook Live Q&A sessions with staff (pending staff engagement). Use consistent branding (logos, colours). Respond promptly to comments and messages. Consider a small budget for boosting key posts (e.g., LTS enrolment open, party package launch).</p>
+                <p><strong>Hashtags:</strong> Use a mix of general and specific hashtags (e.g., #ClarenceRegionalAquaticCentre #GraftonPool #SwimCRAC #MyClarenceValley #SwimLocal #LearnToSwim #FamilyFun #AquaFitness #SchoolCarnival).</p>
+                
+                <div class="placeholder-image-container my-8 p-8 h-72">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                     </svg>
+                     <p class="text-xl font-medium">Social Media Content Plan Table Placeholder</p>
+                     <p class="text-sm mt-1">An image or HTML table detailing the social media content schedule would be placed here.</p>
+                </div>
+
+                <p>A dual-platform approach is recommended. Facebook serves as the information hub, aligning with existing Council communication channels and reaching a broad demographic. Instagram's visual nature is essential for conveying the appeal of the new, modern facility, particularly features like the splash pad and indoor pools. Content must be adapted; Facebook can host detailed text and links, while Instagram requires compelling imagery and concise captions, directing users elsewhere for comprehensive information. Cross-promotion between platforms will maximise reach.</p>
+
+                <h4 class="mt-8 mb-2 text-gray-700">5.1.2. Email Marketing Strategy</h4>
+                <p><strong>Goal:</strong> Build a subscriber database for direct communication, promote programs and offers, and nurture leads.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <p><strong>List Building:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Website Sign-up: Prominent sign-up form on the CRAC section of the Council website or a future dedicated site. Offer an incentive (e.g., chance to win a 10-visit pass each month).</li>
+                            <li>In-Centre Registration: Collect emails during program enrolment, pass purchase, or via QR code at reception. Ensure clear opt-in consent.</li>
+                            <li>Event Bookings: Capture emails through online booking systems.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Content Plan:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Welcome Email: Introduce centre, facilities, links to timetables, pricing, promotions.</li>
+                            <li>Monthly Newsletter: LTS dates, new classes, offers, event calendar, facility news, health tips.</li>
+                            <li>Targeted Emails (Future): Segment list by interest for relevant content.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>Platform:</strong> Utilise an Email Service Provider (e.g., Mailchimp, Campaign Monitor, Aiming for Perfect Gym) for professional templates, list management, automation, and performance tracking.</p>
+                <p><strong>Compliance:</strong> Ensure all email collection and communication adheres to Australian Privacy Principles and anti-spam legislation (explicit opt-in required).</p>
+                <p>The existing online registration system for Learn to Swim and Squads, which already captures email addresses for waitlists, presents a prime opportunity. Integrating an explicit opt-in checkbox for marketing communications within this system will streamline list growth by leveraging an existing operational process, capturing users already engaged with specific programs.</p>
+
+                <h4 class="mt-8 mb-2 text-gray-700">5.1.3. Google Business Profile (GBP) Integration</h4>
+                <p><strong>Goal:</strong> Maximise local visibility in Google Search and Maps, provide essential information easily, build trust through reviews and photos, and drive direct engagement (calls, website visits, directions).</p>
+                <p><strong>Setup & Verification:</strong> Claim/create and verify GBP listing. Address duplicates. Remove old pool listing.</p>
+                <p><strong>Optimisation Best Practices (Summary):</strong> Complete info (NAP, hours, website), NAP consistency, accurate categories, detailed attributes (accessibility, amenities, offerings), high-quality photos/videos, compelling description, list all services, regular Google Posts, monitor Q&A, actively manage reviews, consider messaging.</p>
+                <p><strong>Impact:</strong> A well-optimised GBP is crucial for local search rankings, driven by relevance, distance, and prominence.</p>
+
+                <h3 class="mt-8 mb-3">5.2. Community Integration: Building Local Relationships</h3>
+                <p><strong>Goal:</strong> Position CRAC as an integral and valued part of the Clarence Valley community, fostering goodwill and driving usage through local connections.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <p><strong>Partnership Development:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Local Schools: Beyond carnivals - PE classes, sports programs, reward days.</li>
+                            <li>Community Groups: Seniors, youth, disability support, Indigenous orgs.</li>
+                            <li>Local Businesses: Corporate wellness, sponsorships, room hire.</li>
+                            <li>Health Providers: GPs, physios - promote aquatic exercise benefits.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Community Outreach Activities:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Local Events Presence: Jacaranda Festival, markets, NAIDOC Week. Host themed fun days.</li>
+                            <li>Open Days & Facility Tours: Regular themed open days and guided tours.</li>
+                            <li>Local Media Relations: Proactive communication for positive coverage.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><strong>Potential Community Partner List & Engagement Ideas Table:</strong></p>
+                <div class="overflow-x-auto shadow-lg rounded-xl mb-6 content-card"> <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4">Partner Type</th>
+                                <th class="py-3 px-4">Example Organisation(s)</th>
+                                <th class="py-3 px-4">Potential Engagement Idea</th>
+                                <th class="py-3 px-4">Contact Method</th>
+                                <th class="py-3 px-4">Priority (6 Mths)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-slate-50"><td class="py-3 px-4 border-t border-slate-200">Primary Schools</td><td class="py-3 px-4 border-t border-slate-200">Grafton PS, South Grafton PS, etc.</td><td class="py-3 px-4 border-t border-slate-200">Carnival Bookings, PE Program Trial, Facility Tour</td><td class="py-3 px-4 border-t border-slate-200">Direct Email/Call (Principal/Sports Coord)</td><td class="py-3 px-4 border-t border-slate-200 text-red-600 font-semibold">High</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="py-3 px-4 border-t border-slate-200">Secondary Schools</td><td class="py-3 px-4 border-t border-slate-200">Grafton HS, McAuley Catholic College, etc.</td><td class="py-3 px-4 border-t border-slate-200">Carnival Bookings, Sports Coaching Student Support, Reward Days</td><td class="py-3 px-4 border-t border-slate-200">Direct Email/Call (Principal/Sports Coord)</td><td class="py-3 px-4 border-t border-slate-200 text-red-600 font-semibold">High</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="py-3 px-4 border-t border-slate-200">Indigenous Orgs</td><td class="py-3 px-4 border-t border-slate-200">Bulgarr Ngaru, Gurehlgam, Local Land Council</td><td class="py-3 px-4 border-t border-slate-200">Program Consultation, NAIDOC Event Support, Culturally Specific LTS</td><td class="py-3 px-4 border-t border-slate-200">Direct Outreach (Org Leaders), Collaborate with Mark Daley?, Wait for tension cooled with internal relations</td><td class="py-3 px-4 border-t border-slate-200 text-yellow-600 font-semibold">Medium</td></tr>
+                            <tr class="hover:bg-slate-50"><td class="py-3 px-4 border-t border-slate-200">Seniors Groups</td><td class="py-3 px-4 border-t border-slate-200">Local Seniors Centre</td><td class="py-3 px-4 border-t border-slate-200">Seniors Aqua Trial Class, Group Swim Discount, Room Hire</td><td class="py-3 px-4 border-t border-slate-200">Group Coordinator Contact</td><td class="py-3 px-4 border-t border-slate-200 text-yellow-600 font-semibold">Medium</td></tr>
+                             <tr class="hover:bg-slate-50"><td>Youth Services</td><td>Council Youth Programs, PCYC</td><td>Youth Event Hosting, Discounted Entry Programs</td><td>Program Manager Contact</td><td class="text-yellow-600 font-semibold">Medium</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Disability Providers</td><td>Local NDIS Providers</td><td>Accessibility Showcase Tour, Dedicated Swim Times/Programs</td><td>Provider Liaison</td><td class="text-yellow-600 font-semibold">Medium</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Local Businesses</td><td>Clarence Valley Council, Large Retailers</td><td>Corporate Wellness Passes, Meeting Room Hire</td><td>Business Manager Outreach</td><td class="text-yellow-600 font-semibold">Medium</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Health Professionals</td><td>Local Physio Clinics, GPs</td><td>Referral Program Info, Aquatic Therapy Promotion</td><td>Practice Manager Contact</td><td class="text-yellow-600 font-semibold">Medium</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Service Clubs</td><td>Rotary, Lions</td><td>Potential Event Sponsorship, Volunteer Support</td><td>Club President/Secretary</td><td class="text-green-600 font-semibold">Low</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>The demographic data showing a very high Indigenous population in Grafton (14.6%), nearly five times the NSW average, demands more than a generic community outreach approach. Proactive engagement with local Indigenous organisations is essential. Seeking their input on program design, communication methods, and potential dedicated activities (like culturally sensitive Learn to Swim programs or event participation) will foster genuine inclusion and ensure the Centre is welcoming to this significant part of the local community.</p>
+
+                <h3 class="mt-8 mb-3">5.3. Cultivating Aquatic Partnerships: Clubs & Governing Bodies</h3>
+                <p><strong>Goal:</strong> Establish CRAC as the preferred venue for local swim clubs and position it to host sanctioned events by engaging effectively with official swimming bodies.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <p><strong>Engaging Local Swim Clubs & Hosting Events:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Identify & Connect: Research and contact existing clubs.</li>
+                            <li>Promote Club Facilities: Market dedicated club room, storage, pools.</li>
+                            <li>Develop Lane Hire Agreements: Clear, competitive pricing.</li>
+                            <li>Facilitate Club Events: Solicit bookings for race nights, meets.</li>
+                            <li>Support Club Development: Collaborate on pathways from LTS/Squads.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Collaboration with Official Swimming Bodies (Swimming NSW):</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Understand Affiliation: Be knowledgeable on process.</li>
+                            <li>Meet Sanctioning Awareness: Understand requirements.</li>
+                            <li>Build Governing Body Relationships: Contact Area representative.</li>
+                            <li>Promote Development Pathways: Highlight grassroots to elite.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>The Centre's possession of a FINA-standard 25m indoor pool and a 50m outdoor pool designed for regional level competitions represents a significant competitive advantage. These technical specifications meet the requirements for serious training and sanctioned competition. This capability should be explicitly marketed to swim clubs and Swimming NSW, positioning CRAC not merely as a community pool, but as a high-calibre aquatic sports venue capable of hosting significant events, thereby enhancing its regional profile and justifying appropriate facility hire fees.</p>
+
+                <h3 class="mt-8 mb-3">5.4. Maximising Facility Utilisation: Driving Key Bookings</h3>
+                <p><strong>Goal:</strong> Generate consistent revenue and increase facility usage, particularly during off-peak periods, by actively marketing specific booking types.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <div>
+                        <h4 class="mt-5 mb-2 text-gray-700">Attracting School Carnivals:</h4>
+                        <ul class="list-disc pl-5">
+                            <li>Targeting: Proactively contact all primary and secondary schools in Clarence Valley LGA.</li>
+                            <li>Package Development: Create "School Carnival Package" brochure/web page detailing facilities, safety, booking, pricing, and optional add-ons.</li>
+                            <li>Outreach Strategy: Direct mail/email campaign in Term 3/4 for following year bookings, follow up in Term 1. Offer site inspections.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="mt-5 mb-2 text-gray-700">Promoting Birthday Parties:</h4>
+                         <p class="text-red-600 font-semibold">Urgent Action - Define Offerings: Immediately finalise and publish birthday party package details.</p>
+                        <ul class="list-disc pl-5">
+                            <li>Potential Packages: Standard duration, shared pool access, reserved space, catering options, group size limits, clear pricing, optional add-ons.</li>
+                            <li>Target Audience: Families with children aged approx. 4-12 years.</li>
+                            <li>Promotional Tactics: Dedicated webpage/flyer, social media launch, in-centre posters, targeted emails, local parent website listings.</li>
+                            <li><em>(Visual Note: Draft Birthday Party Package Flyer)</em></li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h4 class="mt-5 mb-2 text-gray-700">Marketing the Community Room:</h4>
+                        <p class="text-red-600 font-semibold">Urgent Action - Define Offerings: Immediately finalise and publish details for the "Large multipurpose room".</p>
+                        <ul class="list-disc pl-5">
+                            <li>Define: Capacity, included amenities, hire fees (hourly, half/full day, differential pricing), booking process.</li>
+                            <li>Target Audience: Community orgs, seniors/youth groups, hobby clubs, local businesses, health practitioners, Council departments.</li>
+                            <li>Promotional Tactics: Webpage/flyer, targeted social media, email newsletters, direct outreach, Council venue directory listing, bundled offers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-4">The availability of multiple distinct bookable assets – pools, party spaces, community room, outdoor areas – creates opportunities for synergistic packaging. Developing explicit bundled offerings, such as a 'Corporate Wellness Day' (room hire + group aqua session + healthy lunch option from canteen) or a 'Community Group Package' (room hire + optional facility tour), can simplify choices for potential hirers, increase the perceived value, and encourage utilisation of multiple Centre components simultaneously.</p>
+
+                <h3 class="mt-8 mb-3">5.5. Digital Advertising Strategy</h3>
+                <p><strong>Goal:</strong> Drive targeted traffic to CRAC website/booking systems, increase program enrolments, promote key bookings, and build brand awareness within Clarence Valley LGA.</p>
+                <p><strong>Objectives (Examples):</strong> Generate X Learn to Swim enquiries/registrations via online ads within 6 months. Achieve Y Birthday Party booking enquiries from digital ads within 6 months. Increase website traffic from targeted local postcodes by Z% within 6 months.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-4">
+                    <div>
+                        <p><strong>Google Ads:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Search Campaigns: Target users actively searching for relevant services. Keywords (long-tail, location-specific), Geotargeting, Compelling Ad Copy, Negative Keywords, Ad Extensions.</li>
+                            <li>Display & Video Campaigns (YouTube): Build awareness visually. Targeting (demographic, geographic, interest), Formats (image ads, short video ads), Campaign Types (Video Reach/Action).</li>
+                            <li>Bidding & Optimisation: Automated bidding, conversion tracking, regular review.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>Facebook & Instagram Ads:</strong></p>
+                        <ul class="list-disc pl-5">
+                            <li>Targeting: Location, Demographics, Interests, Custom/Lookalike Audiences.</li>
+                            <li>Ad Formats: High-quality photos/videos, Carousel ads, Event ads. Mobile optimisation.</li>
+                            <li>Campaign Objectives: Awareness, Traffic, Engagement, Lead Generation, Sales/Conversions.</li>
+                            <li>Messaging: Tailored ad copy, unique selling points, clear CTAs, urgency for offers.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-3">Indicative Digital Advertising Budget Considerations:</h4>
+                <p>The following table provides a hypothetical breakdown. Actual budget allocation will require Council approval and should be flexible based on initial campaign performance and ROI.</p>
+                <div class="overflow-x-auto shadow-lg rounded-xl content-card mt-4">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4">Platform</th>
+                                <th class="py-3 px-4">Campaign Focus / Objective</th>
+                                <th class="py-3 px-4">Indicative Daily Budget (AUD)</th>
+                                <th class="py-3 px-4">Indicative Monthly Estimate (AUD)</th>
+                                <th class="py-3 px-4">Key Metrics</th>
+                                <th class="py-3 px-4">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Google Ads</td>
+                                <td class="py-3 px-4 border-t border-slate-200">"Learn to Swim Grafton" (Search)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$15 - $30</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$450 - $900</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Clicks, Conversions (Enquiries/Sign-ups), CTR, CPC</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Highly targeted keywords, Grafton & immediate surrounds geotargeting.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Google Ads</td>
+                                <td class="py-3 px-4 border-t border-slate-200">"Kids Pool Parties Grafton" (Search)</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$10 - $25</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$300 - $750</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Clicks, Conversions (Booking Enquiries), CTR</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Focus on party-related keywords.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Facebook/Instagram Ads</td>
+                                <td class="py-3 px-4 border-t border-slate-200">General Awareness & Facility Showcase</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$10 - $20</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$300 - $600</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Reach, Impressions, Engagement Rate, Video Views</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Target Clarence Valley LGA, visually appealing creative.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Facebook/Instagram Ads</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Learn to Swim Program Promotion</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$20 - $40</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$600 - $1200</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Lead Form Submissions, Website Clicks (to enrolment page), Cost Per Lead</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Target parents with young children in specific postcodes.</td>
+                            </tr>
+                             <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200">Facebook/Instagram Ads</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Birthday Party Package Promotion</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$15 - $30</td>
+                                <td class="py-3 px-4 border-t border-slate-200">$450 - $900</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Lead Form Submissions, Link Clicks, Cost Per Enquiry</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Target parents, event planners. Highlight fun/ease.</td>
+                            </tr>
+                             <tr class="hover:bg-slate-50">
+                                <td class="py-3 px-4 border-t border-slate-200 font-semibold">Estimated Total Monthly Range</td>
+                                <td class="py-3 px-4 border-t border-slate-200"></td>
+                                <td class="py-3 px-4 border-t border-slate-200 font-semibold">$70 - $145</td>
+                                <td class="py-3 px-4 border-t border-slate-200 font-semibold">$2,100 - $4,350</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Overall ROI, CPA</td>
+                                <td class="py-3 px-4 border-t border-slate-200">Start modest, scale based on performance. Agency fees are separate.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4"><strong>Budget Allocation Strategy:</strong> Start with a modest overall budget, prioritising campaigns for key revenue streams (LTS, Parties) and local awareness. Monitor performance closely (weekly/fortnightly) and reallocate budget towards the best-performing campaigns and platforms. Factor in potential agency fees if outsourcing ad management. Continuous A/B testing of ad copy, creative, and targeting is crucial for optimisation.</p>
+                <p><strong>Measurement & Reporting:</strong> Track key metrics (Impressions, Clicks, CTR, CPC, CPM, Conversions, CPA/CPL, ROAS). Use platform analytics and Google Analytics. Report monthly on performance against objectives and spend.</p>
+            </section>
+
+            <section id="expanding-horizons" class="content-section">
+                <h2 class="section-header">6. Expanding Horizons: Additional Opportunities & Success Metrics</h2>
+                <h3 class="mt-6 mb-3">6.1. Untapped Potential: Future Growth Areas (Beyond 6 Months)</h3>
+                <p>While the initial 6-month focus is on establishing core operations and marketing, several opportunities exist for future growth:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 two-column-list">
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Merchandise: CRAC-branded items.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Expanded Programming: Advanced Aqua Fitness, disability programs, parent-baby sessions, instructor training.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Corporate Wellness Programs.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Loyalty Program.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Vacation Care & School Holiday Programs.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Cafe/Canteen Enhancement.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Major Event Hosting.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li>Technology Integration (Mobile app).</li></ul></div>
+                </div>
+
+                <h3 class="mt-8 mb-3">6.2. Measuring Impact: Key Performance Indicators (KPIs)</h3>
+                <p>To track the effectiveness of this marketing plan and demonstrate return on investment, the following KPIs will be monitored. Example visualisations are provided below the table.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+                    <div class="kpi-category-card">
+                        <h4>Visitation & Usage:</h4>
+                        <ul class="kpi-list"><li>Total daily/weekly/monthly attendance.</li><li>Attendance breakdown by type.</li><li>Peak vs. off-peak usage.</li></ul>
+                    </div>
+                    <div class="kpi-category-card">
+                        <h4>Sales & Revenue:</h4>
+                        <ul class="kpi-list"><li>Multi-visit pass sales.</li><li>LTS/Squad enrolment revenue.</li><li>School Carnival booking revenue.</li><li>Birthday Party booking revenue.</li><li>Community Room hire revenue.</li><li>Casual entry revenue.</li><li>Lane hire revenue.</li></ul>
+                    </div>
+                    <div class="kpi-category-card">
+                        <h4>Program Engagement:</h4>
+                        <ul class="kpi-list"><li>Enrolment numbers per program.</li><li>Class fill rates/waitlist numbers.</li><li>Participant retention rates.</li></ul>
+                    </div>
+                    <div class="kpi-category-card">
+                        <h4>Digital Performance:</h4>
+                        <ul class="kpi-list"><li>Website traffic metrics.</li><li>Social media follower growth & engagement.</li><li>Email list growth & campaign performance.</li><li>Digital Advertising KPIs (Clicks, CTR, Conversions, etc.).</li><li>GBP Performance (Views, Actions, Reviews).</li></ul>
+                    </div>
+                    <div class="kpi-category-card">
+                        <h4>Community & Partnerships:</h4>
+                        <ul class="kpi-list"><li>Number of active partnerships.</li><li>Number of joint promotional activities.</li><li>Volume of positive local media mentions.</li></ul>
+                    </div>
+                    <div class="kpi-category-card">
+                        <h4>Customer Satisfaction:</h4>
+                        <ul class="kpi-list"><li>Online reviews and social media sentiment.</li><li>Direct feedback (comment cards/surveys).</li><li>Complaints vs. compliments.</li></ul>
+                    </div>
+                </div>
+
+
+                <p class="mt-6"><strong>KPI Tracking Framework Table:</strong></p>
+                <div class="overflow-x-auto shadow-lg rounded-xl content-card"> <table class="min-w-full bg-white">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-4">KPI Category</th>
+                                <th class="py-3 px-4">Specific Metric</th>
+                                <th class="py-3 px-4">Baseline (Month 1)</th>
+                                <th class="py-3 px-4">Target (Month 6)</th>
+                                <th class="py-3 px-4">Measurement Frequency</th>
+                                <th class="py-3 px-4">Data Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-slate-50"><td>Visitation</td><td>Total Monthly Visits</td><td>TBD</td><td>Increase by X%</td><td>Monthly</td><td>Door Counters / POS System</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Sales</td><td>LTS/Squad Enrolments</td><td>TBD</td><td>Y Enrolments</td><td>Per Term</td><td>Registration System</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Sales</td><td>Birthday Party Bookings</td><td>0</td><td>G Bookings</td><td>Monthly</td><td>Booking Logs</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Sales</td><td>Community Room Hire Hours</td><td>0</td><td>H Hours</td><td>Monthly</td><td>Booking Logs</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>Facebook Follower Growth</td><td>TBD</td><td>Increase by A%</td><td>Monthly</td><td>Facebook Insights</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>Instagram Engagement Rate</td><td>TBD</td><td>C% Average</td><td>Monthly</td><td>Instagram Insights</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>Email List Size</td><td>TBD</td><td>D Subscribers</td><td>Monthly</td><td>Email Platform Analytics</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>Website Traffic from Ads</td><td>TBD</td><td>Increase by Z%</td><td>Monthly</td><td>Google Analytics</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>Ad Conversion Rate (e.g., LTS Enquiries)</td><td>TBD</td><td>Target TBD</td><td>Monthly</td><td>Ad Platforms / Analytics</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Digital</td><td>GBP Actions (Clicks/Calls/Directions)</td><td>TBD</td><td>Target TBD</td><td>Monthly</td><td>Google Business Profile Insights</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Program</td><td>Aqua Fitness Avg. Class Fill Rate</td><td>TBD</td><td>Z%</td><td>Monthly</td><td>Registration System</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Community</td><td>Active School Partnerships</td><td>TBD</td><td>5 Partnerships</td><td>Quarterly</td><td>Internal Records</td></tr>
+                            <tr class="hover:bg-slate-50"><td>Satisfaction</td><td>Google Review Average Rating</td><td>TBD</td><td>Maintain >4.0</td><td>Monthly</td><td>Google Business Profile</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-2 text-sm text-gray-500 italic">(Note: Specific numerical targets (X, Y, Z, A, B, C, D, F, G, H) to be determined after the first month of operation to establish realistic baselines.)</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="kpi-chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Example: Monthly Visitation Target vs. Actual</h4>
+                        <canvas id="visitationKpiChart"></canvas>
+                    </div>
+                    <div class="kpi-chart-container content-card"> <h4 class="text-center mb-3 font-semibold">Example: Social Media Follower Growth (Facebook)</h4>
+                        <canvas id="socialGrowthKpiChart"></canvas>
+                    </div>
+                </div>
+
+                <p class="mt-6">Regular reporting (monthly dashboards, quarterly reviews) will track progress against these KPIs, allowing for timely adjustments to marketing strategies and resource allocation.</p>
+            </section>
+
+            <section id="budget-considerations" class="content-section">
+                <h2 class="section-header">7. High-Level Budget Considerations</h2>
+                <p>Effective implementation of this marketing plan requires dedicated resources. While specific figures necessitate internal Council approval and budget allocation processes, key areas of expenditure over the initial 6 months include:</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 two-column-list">
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li><strong>Promotional Materials:</strong> Design and printing costs.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li><strong>Digital Marketing:</strong> ESP fees, Paid Ads, Potential Agency Fees.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li><strong>Event Costs:</strong> Open days, festival participation.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li><strong>Staff Time:</strong> Marketing-related tasks.</li></ul></div>
+                    <div><ul class="list-disc pl-5 space-y-1.5"><li><strong>Contingency:</strong> For unforeseen opportunities.</li></ul></div>
+                </div>
+                <p class="mt-4">Initial investment should prioritise high-impact activities with direct revenue potential, such as finalising and promoting the birthday party and community room hire packages, targeted digital promotion of core programs like Learn to Swim, and ensuring the Google Business Profile is fully optimised and actively managed.</p>
+            </section>
+
+            <section id="activation-timeline" class="content-section">
+                <h2 class="section-header">8. 6-Month Activation Timeline</h2>
+                <p>This timeline provides a phased approach to implementing the marketing plan:</p>
+                <div class="space-y-8">
+                    <div class="timeline-phase-card bg-blue-50 border-blue-500">
+                        <h4 class="text-xl font-semibold text-blue-700">Phase 1: Foundation & Launch Buzz (Months 1-2: Approx. April - May 2025)</h4>
+                        <ul class="list-disc pl-5 mt-3 space-y-1.5 text-sm">
+                            <li><strong>Action:</strong> Finalise, price, and launch Birthday Party and Community Room Hire packages. <span class="font-bold text-red-600">Priority: HIGH.</span></li>
+                            <li><strong>Action:</strong> Claim, verify, and fully optimise Google Business Profile (GBP) listing. <span class="font-bold text-red-600">Priority: HIGH.</span></li>
+                            <li><strong>Action:</strong> Establish dedicated CRAC Facebook & Instagram pages; commence regular posting schedule.</li>
+                            <li><strong>Action:</strong> Implement extended launch promotions. Promote 'Come & Try' Aqua Fitness sessions.</li>
+                            <li><strong>Action:</strong> Initiate outreach to priority partners: schools, Indigenous orgs, swim clubs.</li>
+                            <li><strong>Action:</strong> Develop core marketing collateral (digital flyers, update website).</li>
+                            <li><strong>Action:</strong> Set up email sign-up mechanisms; configure welcome email.</li>
+                            <li><strong>Action:</strong> Launch initial small-budget test campaigns on Google Ads & Facebook Ads.</li>
+                            <li><strong>Action:</strong> Establish baseline KPI tracking.</li>
+                        </ul>
+                        <p class="mt-3 text-sm font-semibold text-blue-600"><strong>Milestone:</strong> Party/Room Hire packages live. GBP optimised. Social channels active. Initial ad tests running. Baseline data collected.</p>
+                    </div>
+                    <div class="timeline-phase-card bg-green-50 border-green-500">
+                        <h4 class="text-xl font-semibold text-green-700">Phase 2: Program Push & Partnership Building (Months 3-4: Approx. June - July 2025)</h4>
+                        <ul class="list-disc pl-5 mt-3 space-y-1.5 text-sm">
+                            <li><strong>Action:</strong> Heavy promotion for next term's LTS, Squads, Aqua Fitness.</li>
+                            <li><strong>Action:</strong> Actively market School Carnival Packages.</li>
+                            <li><strong>Action:</strong> Aim to secure first significant block of Community Room/Birthday Party bookings.</li>
+                            <li><strong>Action:</strong> Deepen engagement with community partners.</li>
+                            <li><strong>Action:</strong> Launch first major social media campaign. Actively solicit Google Reviews.</li>
+                            <li><strong>Action:</strong> Distribute first monthly email newsletter.</li>
+                            <li><strong>Action:</strong> Analyse ad performance and refine. Optimise GBP.</li>
+                        </ul>
+                        <p class="mt-3 text-sm font-semibold text-green-600"><strong>Milestone:</strong> Term program enrolments reach target. First school carnival bookings secured. Measurable growth in bookings/partnerships. Ad campaigns optimised.</p>
+                    </div>
+                    <div class="timeline-phase-card bg-yellow-50 border-yellow-500">
+                        <h4 class="text-xl font-semibold text-yellow-700">Phase 3: Sustained Engagement & Optimisation (Months 5-6: Approx. August - September 2025)</h4>
+                        <ul class="list-disc pl-5 mt-3 space-y-1.5 text-sm">
+                            <li><strong>Action:</strong> Maintain consistent promotion of all programs and facility benefits.</li>
+                            <li><strong>Action:</strong> Actively solicit and utilise customer testimonials/UGC. Continue review management.</li>
+                            <li><strong>Action:</strong> Analyse KPI trends; identify underperforming strategies and adjust.</li>
+                            <li><strong>Action:</strong> Begin planning for the next 6-month period.</li>
+                            <li><strong>Action:</strong> Explore feasibility of introducing initial 'Additional Opportunities' (e.g., merchandise).</li>
+                            <li><strong>Action:</strong> Conduct formal mid-plan review meetings.</li>
+                        </ul>
+                        <p class="mt-3 text-sm font-semibold text-yellow-600"><strong>Milestone:</strong> Consistent usage patterns established. Data-driven optimisation underway. Plan for Months 7-12 drafted.</p>
+                    </div>
+                </div>
+                 <p class="mt-6 text-sm italic text-gray-600">(Visual Note: A simple Gantt chart or visual roadmap graphic illustrating these phases and key actions/milestones across the 6-month timeframe could be inserted here if desired.)</p>
+            </section>
+
+            <section id="conclusion" class="content-section">
+                <h2 class="section-header">9. Conclusion and Recommendations</h2>
+                <p>The Clarence Regional Aquatic Centre is a significant asset for the community, launched with considerable anticipation. This 6-Month Marketing Activation Plan provides a strategic roadmap to translate that initial excitement into sustained engagement and utilisation.</p>
+                
+                <div class="action-items-wrapper">
+                    <h4 class="action-items-heading">Key Recommendations for Immediate Action</h4>
+                    <ul class="action-list">
+                        <li class="action-item-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5M12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                            </svg>
+                            <div>
+                                <strong>Define & Promote Key Bookings</strong>
+                                <p>Urgently finalise details for Birthday Parties & Community Room Hire. Launch promotions across digital and in-centre channels.</p>
+                            </div>
+                        </li>
+                        <li class="action-item-card">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                            </svg>
+                            <div>
+                                <strong>Optimise Digital Foundations</strong>
+                                <p>Claim, verify, and fully optimise Google Business Profile. Establish and consistently manage dedicated Facebook & Instagram pages.</p>
+                            </div>
+                        </li>
+                        <li class="action-item-card">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-3.741-.479m-6.462 0A5.971 5.971 0 019 18.72m0 0A9.094 9.094 0 016 18.72m0 0A5.971 5.971 0 012.258 15c0-1.355.68-2.59 1.708-3.366M15 15a4.5 4.5 0 01-6 0m7.5 0a4.5 4.5 0 00-6 0M12 12.75a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+                            </svg>
+                            <div>
+                                <strong>Prioritise Local & Indigenous Outreach</strong>
+                                <p>Implement targeted strategies for the Grafton community and local Indigenous organisations, acknowledging their unique profiles.</p>
+                            </div>
+                        </li>
+                        <li class="action-item-card">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6.75M9 12h6.75m-6.75 5.25h6.75M5.25 6h.008v.008H5.25V6zm.008 5.25h.008v.008H5.25v-.008zm0 5.25h.008v.008H5.25v-.008zm13.5-5.25h.008v.008h-.008V12zm0 5.25h.008v.008h-.008v-.008zm0-10.5h.008v.008h-.008V6.75z" />
+                            </svg> 
+                            <div>
+                                <strong>Solidify School & Club Engagement</strong>
+                                <p>Proactively market facility advantages (competition standards, dedicated rooms) to schools for carnivals and swim clubs.</p>
+                            </div>
+                        </li>
+                        <li class="action-item-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
+                            <div>
+                                <strong>Initiate Targeted Digital Advertising</strong>
+                                <p>Launch initial, focused ad campaigns on Google and Facebook/Instagram with a test budget for high-priority offerings.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="mt-6">By implementing this plan, focusing on data-driven decisions through KPI tracking, and fostering strong community connections, the Clarence Regional Aquatic Centre can successfully navigate its crucial initial operating phase and establish itself as a vibrant, inclusive, and sustainable hub for the entire Clarence Valley. Continuous monitoring, adaptation, and planning for future opportunities will be key to long-term success.</p>
+            </section>
+
+            <section id="supporting-links" class="content-section">
+                <h2 class="section-header">Supporting Links</h2>
+                <h3 class="mt-6 mb-3">Works Cited</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-sm">
+                    <a href="https://www.clarence.nsw.gov.au/Sports-and-recreation/Aquatic-centres/Clarence-Regional-Aquatic-Centre" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Regional Aquatic Centre (Council Page)</a>
+                    <a href="https://arr.news/2025/03/26/clarence-regional-aquatic-centre-officially-opens/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC Officially Opens (ARR News)</a>
+                    <a href="https://www.ausleisure.com.au/news/clarence-regional-aquatic-centre-gets-official-opening/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC Official Opening (AusLeisure)</a>
+                    <a href="https://clarencevalleynews.com.au/clarence-regional-aquatic-centre-officially-opens/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC Officially Opens (CV News)</a>
+                    <a href="https://www.clarence.nsw.gov.au/News-articles/Clarence-Regional-Aquatic-Centre-makes-a-splash-with-50m-pool-opening" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC 50m Pool Opening (Council News)</a>
+                    <a href="https://www.publicnow.com/view/D245EC8347280AD3A3B4AAEF2A7A9053A2F09D1F?1739483282" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC 50m Pool Opening (PublicNow)</a>
+                    <a href="https://2gf.au/articles/stage-2-of-clarence-valley-regional-aquatic-centre/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC Stage 2 Open (2GF)</a>
+                    <a href="https://arr.news/2025/02/19/community-enthusiasm-makes-a-splash-as-50m-pool-opens-in-grafton/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Community Enthusiasm for 50m Pool (ARR News)</a>
+                    <a href="https://clarencevalleynews.com.au/join-us-for-the-official-opening-of-the-clarence-regional-aquatic-centre/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Join Official Opening (CV News)</a>
+                    <a href="https://www.clarence.nsw.gov.au/Projects/Regional-Aquatic-Centre" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">CRAC Project Page (Council)</a>
+                    <a href="https://www.careersatcouncil.com.au/job/aqua-fitness-instructor-20250402/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Aqua Fitness Instructor Job</a>
+                    <a href="https://www.ausleisure.com.au/news/clarence-regional-aquatic-centre-secures-funding-for-recreational-waterslides/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Waterslide Funding (AusLeisure)</a>
+                    <a href="https://www.clarence.nsw.gov.au/News-articles/Clarence-Regional-Aquatic-Centre-opening-rescheduled" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Opening Rescheduled (Council News)</a>
+                    <a href="https://www.ausleisure.com.au/news/delayed-opening-for-clarence-regional-aquatic-centre/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Delayed Opening (AusLeisure)</a>
+                    <a href="https://insidelocalgovernment.com.au/rain-delays-29m-clarence-aquatic-centre-build/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Rain Delays Build (Inside Local Gov)</a>
+                    <a href="https://clarencevalleynews.com.au/clarence-incomes-and-indigenous-population-increase-census-data-reveals/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Census Data (CV News)</a>
+                    <a href="https://thenorthernriverstimes.com.au/naidoc-day-celebration-at-grafton/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">NAIDOC Elders Day Grafton (NR Times)</a>
+                    <a href="https://www.seek.com.au/council-jobs/in-South-Grafton-NSW-2460" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Council Jobs South Grafton (SEEK)</a>
+                    <a href="https://events.humanitix.com/youth-week-schools-out-pool-party" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Youth Week Pool Party (Humanitix)</a>
+                    <a href="https://cdn1.clarence.nsw.gov.au/community-services-directory/organisation.asp?id=46&m=p&org=CSD-KZX-62-56-27" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence River Masters Swimming (Council Directory)</a>
+                    <a href="https://abs.gov.au/census/find-census-data/quickstats/2021/SAL13598" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">2021 South Grafton Census (ABS)</a>
+                    <a href="https://profile.id.com.au/clarence-valley/population?WebID=200" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Valley Population Profile (ID)</a>
+                    <a href="https://abs.gov.au/census/find-census-data/quickstats/2021/10401" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">2021 Clarence Valley Census (ABS)</a>
+                    <a href="https://app.remplan.com.au/clarence-valley/community/population/age" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Valley Demographics (REMPLAN)</a>
+                    <a href="https://www.clarenceaquaticcentre.org.au/service-page/pool-party" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Pool Party (Clarence Aquatic Tas - Example)</a>
+                    <a href="https://www.clarenceaquaticcentre.org.au/pool-parties" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Pool Parties (Clarence Aquatic Tas - Example)</a>
+                    <a href="https://www.gccarc.com/?page_id=101" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Birthdays (GC CARC - Example)</a>
+                    <a href="https://grac.ymca.org.au/swim/birthday-parties" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Birthday Parties (GRAC - Example)</a>
+                    <a href="https://www.abs.gov.au/census/find-census-data/quickstats/2021/LGA11730" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">2021 Clarence Valley LGA Census (ABS)</a>
+                    <a href="https://profile.id.com.au/clarence-valley/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Valley Community Profile (ID)</a>
+                    <a href="https://www.clarence.nsw.gov.au/News-articles/EXPRESS.-EMPOWER.-GET-LOUD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">EXPRESS. EMPOWER. GET LOUD! (Council News)</a>
+                    <a href="https://www.yambaswimmingpool.com.au/events_category/clarence-valley-triathlon-club/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Clarence Valley Triathlon Club (Yamba Pool)</a>
+                    <a href="https://education.nsw.gov.au/content/dam/main-education/en/home/edm-links/School_Swimming_Carnival_Supervision_Guide.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">School Carnival Safety Guide (NSW Edu)</a>
+                    <a href="https://nsw.swimming.org.au/sites/default/files/assets/documents/Guidelines%20for%20School%20Swim%20Meets%20190318.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">School Swim Meet Guidelines (Swimming NSW)</a>
+                    <a href="https://mmafc.com.au/wp-content/uploads/2022/07/2.-NSW-DET-Water-Safety-Guidelines-Unstructured-Aquatic-Activity.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Water Safety Guidelines (NSW DET via MMAFC)</a>
+                    <a href="https://www.clarence.nsw.gov.au/Community/Community-centres" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Community Centres (Council)</a>
+                    <a href="https://coastandvalleynsw.swimmingclub.org.au/swim-club-directory/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Swim Club Directory (Coast & Valley)</a>
+                    <a href="https://clubhouse.swimming.org.au/new-clubs/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">New Clubs (Swimming NSW)</a>
+                    <a href="https://issuu.com/clarencevalleycouncil/docs/delivery_program_progress_report_july_december_2" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Delivery Program Progress Report (Council via Issuu)</a>
+                    <a href="https://arr.news/2024/08/14/homelessness-week-2024-in-the-clarence-valley/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Homelessness Week 2024 (ARR News)</a>
+                    <a href="https://arr.news/politics/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Politics & Opinion (ARR News)</a>
+                    <a href="https://burwoodg-h.schools.nsw.gov.au/content/dam/doe/sws/schools/b/burwoodg-h/localcontent/notes/sport/sport-2022/Swimming-Carnival-Information-Note-2022.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Swimming Carnival Info Note (Burwood Girls HS - Example)</a>
+                    <a href="https://www.myclarencevalley.com/whats-on/yamba-multisports-club-triathlon/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Yamba Multisports Club Triathlon (My CV)</a>
+                    <a href="https://wellington.govt.nz/recreation/facilities-and-centres/swimming-pools/wrac" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Wellington Regional Aquatic Centre (Example)</a>
+                    <a href="https://lanecoveswimclub.org.au/membership/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Membership (Lane Cove Swim Club - Example)</a>
+                    <a href="https://britishswimschool.com/worcester/swim-lessons-near-grafton/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Swim Lessons Near Grafton (British Swim School - Example)</a>
+                    <a href="https://support.google.com/business/answer/7091?hl=en" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Improve Local Ranking (Google Business)</a>
+                    <a href="https://support.google.com/business/thread/123065090/how-do-organizations-like-state-parks-use-google-my-business?hl=en" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">GBP for State Parks (Google Support)</a>
+                    <a href="https://www.clubautomation.com/resources/google-my-business-for-health-clubs/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">GBP for Health Clubs (Club Automation)</a>
+                    <a href="https://www.e2msolutions.com/blog/google-business-profile-guide/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">GBP Guide (E2M Solutions)</a>
+                    <a href="https://www.seospace.co/blog/local-seo-google-my-business" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Local SEO with GBP (SEOSpace)</a>
+                    <a href="https://sage.agency/blog/google-my-business/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Boost GBP (Sage Digital)</a>
+                    <a href="https://daltonluka.com/blog/google-my-business-categories" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">GBP Categories List (Dalton Luka)</a>
+                    <a href="https://recranet.com/en/marketing-tips-tricks/google-company-profile-leisure-industry" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">GBP for Leisure Industry (Recranet)</a>
+                    <a href="https://comradeweb.com/blog/digital-marketing-for-pool-and-spa-companies/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Digital Marketing for Pool Companies (Comrade)</a>
+                    <a href="https://www.webfx.com/industries/recreation-entertainment/swimming-pool-companies/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Marketing Strategies for Pool Companies (WebFX)</a>
+                    <a href="https://www.reddit.com/r/PPC/comments/1eird0w/google_ads_help_for_community_organization/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Google Ads Help for Community Org (Reddit)</a>
+                    <a href="https://webmasters.stackexchange.com/questions/136697/local-campaign-strategy-core-towns-vs-extended-service-area" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Local Campaign Strategy (Webmasters SE)</a>
+                    <a href="https://support.google.com/google-ads/thread/230426259/optimization-best-practices-check-list?hl=en" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Google Ads Optimization Checklist (Google Support)</a>
+                    <a href="https://emulent.com/blog/digital-marketing-strategy-for-swimming-pool-companies/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Digital Marketing for Pool Companies (Emulent)</a>
+                    <a href="https://hayward.com/blog/post/5-expert-marketing-strategies-every-pool-business-owner-must-know" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Expert Marketing for Pool Business (Hayward)</a>
+                    <a href="https://ads.google.com/intl/en_us/home/resources/articles/build-awareness-with-video/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">AI for Video Advertising (Google Ads)</a>
+                    <a href="https://www.swimseo.com/post/effective-pool-company-ad-ideas-for-rapid-growth-in-2024" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Pool Company Ad Ideas (Swim SEO)</a>
+                    <a href="https://support.google.com/google-ads/answer/6154846?hl=en" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Google Ads Best Practices (Google Support)</a>
+                    <a href="https://searchengineland.com/google-ads-best-practices-good-bad-balancing-act-433821" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Google Ads Best Practices (Search Engine Land)</a>
+                    <a href="https://marginmedia.com.au/our-blog/facebook-ad-costs-australia" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ad Costs Australia (Margin Media)</a>
+                    <a href="https://desygner.com/blog/industry/how-to-market-swimming-pools-business" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Marketing Swimming Pools Business (Desygner)</a>
+                    <a href="https://www.rb.com.au/blog/facebook-ads-cost/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Cost (Redback)</a>
+                    <a href="https://www.onlinemarketinggurus.com.au/blog/facebook-ads-budgeting-spending-best-examples-common-fb-advertising-mistakes/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Budgeting (Online Marketing Gurus)</a>
+                    <a href="https://aiad.com.au/what-do-facebook-ads-cost/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Cost (AIA)</a>
+                    <a href="https://www.believeadvertising.com/what-is-a-good-budget-for-facebook-ads-for-small-business-in-australia/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Budget for Small Business (Believe Advertising)</a>
+                    <a href="https://unrealmedia.com.au/how-much-money-should-i-waste-on-facebook-ads/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Budget (Unreal Media)</a>
+                    <a href="https://www.webapex.com.au/facebook-ads-cost" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ads Cost Australia (Webapex)</a>
+                    <a href="https://www.localdigital.com.au/blog/how-much-does-facebook-advertising-cost" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Advertising Cost (Local Digital)</a>
+                    <a href="https://www.reddit.com/r/buhaydigital/comments/1j9wk0w/working_with_australian_clients_need_insights_on/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline truncate">Facebook Ad Budget Insights (Reddit)</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-gray-800 text-white text-center p-8 mt-10">
+        <p>&copy; <span id="currentYear"></span> Clarence Regional Aquatic Centre | Clarence Valley Council. All rights reserved.</p>
+        <p class="text-sm opacity-80 mt-1">This marketing plan is for internal strategic purposes.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const sidebarMenu = document.getElementById('sidebar-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const bodyEl = document.body;
+
+        menuToggle.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('open');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            bodyEl.classList.toggle('mobile-menu-active');
+            menuToggle.setAttribute('aria-expanded', sidebarMenu.classList.contains('open'));
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = sidebarMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (sidebarMenu.classList.contains('open')) {
+                    sidebarMenu.classList.remove('open');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    bodyEl.classList.remove('mobile-menu-active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+
+        // Smooth scroll for sidebar links and active state
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const sections = document.querySelectorAll('.content-section');
+        const sidebarNav = document.getElementById('sidebar-nav'); 
+
+        function changeActiveLink() {
+            let index = sections.length;
+            const headerHeight = document.querySelector('.main-header-bar')?.offsetHeight || 0;
+            const offset = headerHeight + 20; 
+
+            while(--index && window.scrollY + offset < sections[index].offsetTop) {} 
+            
+            sidebarLinks.forEach((link) => link.classList.remove('active'));
+            if (sidebarLinks[index]) { 
+                 sidebarLinks[index].classList.add('active');
+                 const activeLinkElement = sidebarLinks[index];
+                 if (window.innerWidth >= 768 && activeLinkElement && sidebarNav) { 
+                    const topPos = activeLinkElement.offsetTop;
+                    const sidebarHeight = sidebarNav.clientHeight; 
+                    const linkHeight = activeLinkElement.clientHeight;
+                    const desiredScrollTop = topPos - (sidebarHeight / 2) + (linkHeight / 2);
+                    const newScrollTop = Math.max(0, Math.min(desiredScrollTop, sidebarNav.scrollHeight - sidebarHeight));
+                    if (Math.abs(sidebarNav.scrollTop - newScrollTop) > 1) { 
+                        sidebarNav.scrollTop = newScrollTop;
+                    }
+                 }
+            }
+        }
+        window.addEventListener('load', () => {
+            changeActiveLink(); 
+            const headerActualHeight = document.querySelector('.main-header-bar')?.offsetHeight || 0;
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.paddingTop = `${headerActualHeight + 20}px`;
+                section.style.marginTop = `-${headerActualHeight + 20}px`;
+            });
+            if (window.innerWidth >= 768) {
+                const desktopSidebar = document.querySelector('.sidebar-menu-container');
+                if (desktopSidebar) {
+                    desktopSidebar.style.top = `${headerActualHeight + 16}px`; 
+                    desktopSidebar.style.height = `calc(100vh - ${headerActualHeight + 16}px - 1rem)`; 
+                }
+            }
+        }); 
+        window.addEventListener('scroll', changeActiveLink);
+        window.addEventListener('resize', () => { 
+             changeActiveLink();
+             const headerActualHeight = document.querySelector('.main-header-bar')?.offsetHeight || 0;
+             if (window.innerWidth >= 768) {
+                const desktopSidebar = document.querySelector('.sidebar-menu-container');
+                if (desktopSidebar) {
+                    desktopSidebar.style.top = `${headerActualHeight + 16}px`; 
+                    desktopSidebar.style.height = `calc(100vh - ${headerActualHeight + 16}px - 1rem)`;
+                }
+            } else { 
+                 const desktopSidebar = document.querySelector('.sidebar-menu-container');
+                 if (desktopSidebar && !desktopSidebar.classList.contains('open')) { 
+                    desktopSidebar.style.top = ''; 
+                    desktopSidebar.style.height = '';
+                 }
+            }
+        });
+
+
+        // Chart.js Integration
+        document.addEventListener('DOMContentLoaded', function () {
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false, 
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 12, 
+                            },
+                            color: '#374151', 
+                            boxWidth: 15,
+                            padding: 15
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11 
+                            },
+                            color: '#4B5563' 
+                        },
+                        grid: {
+                            color: '#E5E7EB' 
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                family: 'Inter, sans-serif',
+                                size: 11 
+                            },
+                             color: '#4B5563' 
+                        },
+                        grid: {
+                            display: false 
+                        }
+                    }
+                }
+            };
+            const barChartColors = ['#3B82F6', '#F59E0B', '#10B981']; 
+
+            const medianAgeCtx = document.getElementById('medianAgeChart')?.getContext('2d');
+            if (medianAgeCtx) {
+                new Chart(medianAgeCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Clarence Valley LGA', 'Grafton (SA2)', 'NSW Average'],
+                        datasets: [{
+                            label: 'Median Age (Years)',
+                            data: [49, 43, 39],
+                            backgroundColor: barChartColors,
+                            borderColor: barChartColors.map(color => color.replace('0.7', '1')),
+                            borderWidth: 1,
+                            borderRadius: 4, 
+                        }]
+                    },
+                    options: {...commonChartOptions} 
+                });
+            }
+
+            const indigenousPopCtx = document.getElementById('indigenousPopChart')?.getContext('2d');
+            if (indigenousPopCtx) {
+                new Chart(indigenousPopCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Clarence Valley LGA', 'Grafton (SA2)', 'NSW Average'],
+                        datasets: [{
+                            label: 'Aboriginal & TSI Pop (%)',
+                            data: [8.1, 12.2, 3.4],
+                            backgroundColor: barChartColors,
+                            borderColor: barChartColors.map(color => color.replace('0.7', '1')),
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {...commonChartOptions}
+                });
+            }
+
+            const medianIncomeCtx = document.getElementById('medianIncomeChart')?.getContext('2d');
+            if (medianIncomeCtx) {
+                new Chart(medianIncomeCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Clarence Valley LGA', 'Grafton (SA2)', 'NSW Average'],
+                        datasets: [{
+                            label: 'Median Weekly Household Income ($)',
+                            data: [1123, 1125, 1829],
+                            backgroundColor: barChartColors,
+                            borderColor: barChartColors.map(color => color.replace('0.7', '1')),
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {...commonChartOptions}
+                });
+            }
+
+            const assistanceNeedCtx = document.getElementById('assistanceNeedChart')?.getContext('2d');
+            if (assistanceNeedCtx) {
+                new Chart(assistanceNeedCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Clarence Valley LGA', 'Grafton (SA2)', 'NSW Average'],
+                        datasets: [{
+                            label: 'Need for Assistance (%)',
+                            data: [7.8, 8.8, 6.0],
+                            backgroundColor: barChartColors,
+                            borderColor: barChartColors.map(color => color.replace('0.7', '1')),
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {...commonChartOptions}
+                });
+            }
+
+            const visitationKpiCtx = document.getElementById('visitationKpiChart')?.getContext('2d');
+            if (visitationKpiCtx) {
+                new Chart(visitationKpiCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+                        datasets: [{
+                            label: 'Target Visits',
+                            data: [1500, 1600, 1700, 1800, 2000, 2200], 
+                            backgroundColor: '#A5B4FC', 
+                            borderColor: '#6366F1', 
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }, {
+                            label: 'Actual Visits',
+                            data: [1450, 1550, 1780, 1750, 0, 0], 
+                            backgroundColor: '#3B82F6', 
+                            borderColor: '#1D4ED8', 
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {...commonChartOptions, indexAxis: 'x'} 
+                });
+            }
+
+            const socialGrowthKpiCtx = document.getElementById('socialGrowthKpiChart')?.getContext('2d');
+            if (socialGrowthKpiCtx) {
+                new Chart(socialGrowthKpiCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Start', 'Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6 (Target)'],
+                        datasets: [{
+                            label: 'Facebook Followers',
+                            data: [500, 580, 670, 750, 0, 0, 1000], 
+                            borderColor: '#2563EB', 
+                            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                            fill: true,
+                            tension: 0.2 
+                        }]
+                    },
+                    options: {...commonChartOptions}
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
